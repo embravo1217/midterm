@@ -36,6 +36,12 @@ public class PlayerBehavior : MonoBehaviour
 
     bool jump = false;
 
+    public AudioSource coinsfx;
+    public AudioSource jumpsfx;
+    public AudioSource discoverysfx;
+    public AudioClip clip;
+    public float volume = 0.5f;
+
     //Animator myAnim;
 
     // Start is called before the first frame update
@@ -54,6 +60,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            jumpsfx.PlayOneShot(jumpsfx.clip, volume);
             jump = true;
         }
 
@@ -123,37 +130,44 @@ public class PlayerBehavior : MonoBehaviour
         if (other.gameObject.name == "Coin1")
         {
             haveCoin1 = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
         if (other.gameObject.name == "Coin2")
         {
             haveCoin2 = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
         if (other.gameObject.name == "Coin3")
         {
             haveCoin3 = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
 
         if (other.gameObject.name == "Door")
         {
+            discoverysfx.PlayOneShot(discoverysfx.clip, volume);
             SceneManager.LoadScene(1);
         }
 
         if (other.gameObject.name == "CoinOne")
         {
             haveCoinOne = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
         if (other.gameObject.name == "CoinTwo")
         {
             haveCoinTwo = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
         if (other.gameObject.name == "CoinThree")
         {
             haveCoinThree = true;
+            coinsfx.PlayOneShot(coinsfx.clip, volume);
             Destroy(other.gameObject);
         }
     }

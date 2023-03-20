@@ -17,3 +17,12 @@ public class GameManager : MonoBehaviour
         //aaa
     }
 }
+
+public class PlayAudio : MonoBehaviour
+{
+    public AudioSource musicsfx;
+    void Start()
+    {
+        musicsfx.Play();
+    }
+}
