@@ -60,8 +60,8 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            mySource.PlayOneShot(jumpsfx, volume);
             jump = true;
+            mySource.PlayOneShot(jumpsfx, volume);
         }
 
         if(horizontalMove > 0.2f || horizontalMove < 0.2f)
