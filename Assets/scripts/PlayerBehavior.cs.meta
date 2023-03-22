@@ -3,7 +3,14 @@ guid: 664f1cbe19e049247a4d8a02f070e8f8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - myBody: {instanceID: 0}
+  - roomOneText: {instanceID: 0}
+  - roomTwoText: {instanceID: 0}
+  - mySource: {instanceID: 0}
+  - coinsfx: {fileID: 8300000, guid: c139aca010e3b14488d9349a67f2a9ec, type: 3}
+  - jumpsfx: {fileID: 8300000, guid: ff3d5ad6641f6774c8b9a87045e5bba7, type: 3}
+  - discoverysfx: {fileID: 8300000, guid: aa531367b92662144866acca08134033, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
