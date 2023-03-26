@@ -61,7 +61,7 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            mySource.PlayOneShot(jumpsfx, volume);
+            mySource.PlayOneShot(jumpsfx, volume + 2);
         }
 
         if(horizontalMove > 0.2f || horizontalMove < 0.2f)
@@ -130,45 +130,45 @@ public class PlayerBehavior : MonoBehaviour
         if (other.gameObject.name == "Coin1")
         {
             haveCoin1 = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
         if (other.gameObject.name == "Coin2")
         {
             haveCoin2 = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
         if (other.gameObject.name == "Coin3")
         {
             haveCoin3 = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
 
         if (other.gameObject.name == "Door")
         {
-            mySource.PlayOneShot(discoverysfx, volume);
             SceneManager.LoadScene(1);
+            mySource.PlayOneShot(discoverysfx, volume);
         }
 
         if (other.gameObject.name == "CoinOne")
         {
             haveCoinOne = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
         if (other.gameObject.name == "CoinTwo")
         {
             haveCoinTwo = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
         if (other.gameObject.name == "CoinThree")
         {
             haveCoinThree = true;
-            mySource.PlayOneShot(coinsfx, volume);
             Destroy(other.gameObject);
+            mySource.PlayOneShot(coinsfx, volume);
         }
     }
 
