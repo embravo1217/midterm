@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     float horizontalMove;
     public float speed;
 
@@ -62,6 +64,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             jump = true;
             mySource.PlayOneShot(jumpsfx, volume + 2);
+            CreateDust();
         }
 
         if(horizontalMove > 0.2f || horizontalMove < 0.2f)
@@ -172,4 +175,8 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
+    void CreateDust()
+    {
+        dust.Play();
+    }
 }
