@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,12 @@ public class GameManager : MonoBehaviour
 
 public class PlayAudio : MonoBehaviour
 {
-    public AudioSource musicsfx;
+    public AudioSource mySource;
+    public AudioClip musicsfx;
+    public float volume = 0.5f;
+
     void Start()
     {
-        musicsfx.Play();
+        mySource.PlayOneShot(musicsfx, volume);
     }
 }
